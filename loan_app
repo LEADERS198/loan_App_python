@@ -1,0 +1,12 @@
+rate = float(input("Enter Annual Interest Rate, for example 2.35: "))
+loan_Amount = float(input("Enter Loan Amount for example ₦200: ₦"))
+years = float(input("Enter Number of Years: "))
+monthly_Rate = (rate) / 1200
+multiple = loan_Amount * monthly_Rate
+months = years * 12
+rate_Sum = 1 + monthly_Rate
+denominator1 = 1 / pow(rate_Sum, months)
+monthly_Payment = float(multiple / (1-denominator1))
+print("Monthly payment is: ₦" , int(monthly_Payment*100)/100.0)
+total_payment = float(monthly_Payment *years* 12)
+print("Total payment is: ₦" , int(total_payment*100)/100.0)
